@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Information - Yurii Holiienko</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .medical-info {
+            padding: 40px;
+        }
+        
+        .info-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .info-section h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-section h3::before {
+            content: "⚕";
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        
+        .label {
+            font-weight: 600;
+            color: #495057;
+            min-width: 120px;
+        }
+        
+        .value {
+            color: #212529;
+            text-align: right;
+            flex: 1;
+            margin-left: 20px;
+        }
+        
+        .emergency {
+            background: #fff3cd;
+            border-left-color: #ffc107;
+            border: 2px solid #ffeaa7;
+        }
+        
+        .emergency h3 {
+            color: #856404;
+        }
+        
+        .emergency h3::before {
+            content: "🚨";
+        }
+        
+        .allergy {
+            background: #f8d7da;
+            border-left-color: #dc3545;
+            border: 2px solid #f5c6cb;
+        }
+        
+        .allergy h3 {
+            color: #721c24;
+        }
+        
+        .allergy h3::before {
+            content: "⚠️";
+        }
+        
+        .footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .medical-info {
+                padding: 20px;
+            }
+            
+            .info-item {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+            
+            .label {
+                margin-bottom: 5px;
+            }
+            
+            .value {
+                text-align: left;
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Medical Information</h1>
+            <p>Emergency Medical Details</p>
+        </div>
+        
+        <div class="medical-info">
+            <div class="info-section">
+                <h3>Personal Information</h3>
+                <div class="info-item">
+                    <span class="label">Full Name:</span>
+                    <span class="value">Serhii Holiienko</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Date of Birth:</span>
+                    <span class="value">7.01.1988</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Address:</span>
+                    <span class="value">Mikołowska 124, Katowice</span>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <h3>Medical Details</h3>
+                <div class="info-item">
+                    <span class="label">Blood Type:</span>
+                    <span class="value">I(O)+</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Insurance:</span>
+                    <span class="value">PZU 1108019423</span>
+                </div>
+            </div>
+            
+            <div class="info-section allergy">
+                <h3>Allergies</h3>
+                <div class="info-item">
+                    <span class="label">Allergy:</span>
+                    <span class="value">Iodine Contrast (kontrast jodowy)</span>
+                </div>
+            </div>
+            
+            <div class="info-section emergency">
+                <h3>Emergency Contact</h3>
+                <div class="info-item">
+                    <span class="label">Contact Person:</span>
+                    <span class="value">Serhii</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Phone Number:</span>
+                    <span class="value">+48 888 760 818</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>This information should be accessible to emergency medical personnel</p>
+            <p>Last updated: December 2024</p>
+        </div>
+    </div>
+</body>
+</html>
